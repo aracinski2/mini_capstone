@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+product = Product.new(name: "monitor", price: 300, image_url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6362/6362423_sd.jpg;maxHeight=640;maxWidth=550", description: "This is an LG 24 inch LED monitor")
+
+product.save
