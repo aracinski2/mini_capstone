@@ -8,8 +8,7 @@ Rails.application.routes.draw do
   # end
 
   namespace :api do
-    get "/one_product" => "products#one_product_action"
-    get "/all_products" => "products#all"
+    get "/products" => "products#index"
   end
   
 end
