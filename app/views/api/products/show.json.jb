@@ -2,6 +2,7 @@
   id: @product.id,
   name: @product.name,
   price: @product.price,
+  tax: @product.tax,
   description: @product.description,
   image_url: @product.image_url
 }
