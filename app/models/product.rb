@@ -3,7 +3,7 @@ class Product < ApplicationRecord
     price * 0.09
   end
 
-  def is_discounted
+  def is_discounted?
     if price < 10
       return true
     else
