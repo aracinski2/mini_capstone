@@ -1,11 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-product = Product.new(name: "monitor", price: 300, image_url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6362/6362423_sd.jpg;maxHeight=640;maxWidth=550", description: "This is an LG 24 inch LED monitor")
-
-product.save
+Product.create!([
+  {name: "snowboard", price: "600.0", image_url: "https://images.evo.com/imgp/zoom/181645/718522/lib-tech-skate-banana-btx-snowboard-2021-.jpg", description: "This is a Lib Tech Skate Banana snowboard", inventory: nil},
+  {name: "blender", price: "80.0", image_url: "https://cdnimg.webstaurantstore.com/images/products/large/525112/2065643.jpg", description: "This is a Galaxy commercial blender", inventory: nil},
+  {name: "monitor", price: "300.0", image_url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6362/6362423_sd.jpg;maxHeight=640;maxWidth=550", description: "This is an LG 24 inch LED monitor", inventory: nil},
+  {name: "lamp", price: "35.0", image_url: "imageurlhere", description: "A lamp that makes light", inventory: nil},
+  {name: "Iphone 12 pro", price: "1000.0", image_url: "smarterpicture", description: "This is a smarter phone", inventory: nil}
+])
