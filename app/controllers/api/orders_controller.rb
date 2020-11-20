@@ -1,6 +1,8 @@
 class Api::OrdersController < ApplicationController
+  before_action :authenticate_user 
 
   def index
+    @orders = Order.all
     render 'index.json.jb'
   end
 
@@ -17,3 +19,5 @@ class Api::OrdersController < ApplicationController
     render 'show.json.jb'
   end
 end
+# make these above order method without model
+# update index action for one users orders not all
