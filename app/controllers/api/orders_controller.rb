@@ -7,17 +7,22 @@ class Api::OrdersController < ApplicationController
   end
 
   def create
+    product = Product.find_by(id: params[:product_id])
+    subtotal = product.price * params[:quantity].to_i
+    tax_value = 0.09
+    tax = subtotal * tax_value
+    
+    
     @order = Order.new(
       user_id: current_user.id,
       product_id: params[:product_id],
       quantity: params[:quantity],
-      subtotal: @product = Product.find_by(id: params[:product_id]).price,
-      tax: @product = Product.find_by(id: params[:product_id]).tax,
-      total: @product = Product.find_by(id: params[:product_id]).price + @product = Product.find_by(id: params[:product_id]).tax
+      subtotal: subtotal,
+      tax: tax,
+      total: subtotal + tax
     )
     @order.save
     render 'show.json.jb'
   end
 end
-# make these above order method without model
 # update index action for one users orders not all
