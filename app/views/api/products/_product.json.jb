@@ -7,5 +7,6 @@
   discount: product.is_discounted?,
   description: product.description,
   supplier: product.supplier.name,
-  images: product.images
+  images: product.images,
+  current_user: current_user
 }

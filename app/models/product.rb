@@ -6,6 +6,7 @@ class Product < ApplicationRecord
   
   belongs_to :supplier
   has_many :images
+  has_many :orders
 
   # add if/ else condition to create/update action
 

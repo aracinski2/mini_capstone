@@ -2,6 +2,9 @@ class Api::ProductsController < ApplicationController
   
   def index
     # @products = Product.all
+    p "current_user"
+    p current_user
+    
     search_term = params[:search]
     @products = Product.where("name ILIKE '%#{search_term}%'")
     if params[:sort] == "price"
