@@ -8,6 +8,8 @@ class Product < ApplicationRecord
   has_many :images
   has_many :orders
 
+  has_many :category_products
+
   # add if/ else condition to create/update action
 
   # def supplier
