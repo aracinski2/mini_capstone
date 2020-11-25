@@ -15,8 +15,6 @@ class Api::OrdersController < ApplicationController
     
     @order = Order.new(
       user_id: current_user.id,
-      product_id: params[:product_id],
-      quantity: params[:quantity],
       subtotal: subtotal,
       tax: tax,
       total: subtotal + tax
@@ -25,4 +23,3 @@ class Api::OrdersController < ApplicationController
     render 'show.json.jb'
   end
 end
-# update index action for one users orders not all
