@@ -4,14 +4,15 @@ class Api::ProductsController < ApplicationController
     # @products = Product.all
     p "current_user"
     p current_user
-    
-    search_term = params[:search]
-    @products = Product.where("name ILIKE '%#{search_term}%'")
-    if params[:sort] == "price"
-      @products = Product.order("price #{params[:sort_order]}")
-    else
-      @products = Product.order("id asc")
-    end
+    category = Category.find_by(name: "electronics")
+    @products = category.products
+    # search_term = params[:search]
+    # @products = Product.where("name ILIKE '%#{search_term}%'")
+    # if params[:sort] == "price"
+    #   @products = Product.order("price #{params[:sort_order]}")
+    # else
+    #   @products = Product.order("id asc")
+    # end
 
     # if params[:discount] == true
     #   @products = Product.where("price < 300.00")

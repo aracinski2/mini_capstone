@@ -8,5 +8,5 @@
   description: product.description,
   supplier: product.supplier.name,
   images: product.images,
-  current_user: current_user
+  current_user: current_user,
 }
