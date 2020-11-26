@@ -5,7 +5,7 @@ class Api::OrdersController < ApplicationController
     @orders = current_user.orders
     render 'index.json.jb'
   end
-
+ 
   def create
     # product = Product.find_by(id: params[:product_id])
     # subtotal = product.price * params[:quantity].to_i
@@ -33,7 +33,6 @@ class Api::OrdersController < ApplicationController
     carted_products.each do |carted_product|
       carted_product.update(status: "purchased", order_id: @order.id)
     end
-
 
     render 'show.json.jb'
   end
