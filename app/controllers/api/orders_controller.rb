@@ -30,6 +30,11 @@ class Api::OrdersController < ApplicationController
     ) 
     @order.save
     
+    carted_products.each do |carted_product|
+      carted_product.update(status: "purchased", order_id: @order.id)
+    end
+
+
     render 'show.json.jb'
   end
 end
