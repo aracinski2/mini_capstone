@@ -1,11 +1,11 @@
 class Api::ProductsController < ApplicationController
   
   def index
-    # @products = Product.all
-    p "current_user"
-    p current_user
-    category = Category.find_by(name: "electronics")
-    @products = category.products
+    @products = Product.all
+    # p "current_user"
+    # p current_user
+    # category = Category.find_by(name: "electronics")
+    # @products = category.products
     # search_term = params[:search]
     # @products = Product.where("name ILIKE '%#{search_term}%'")
     # if params[:sort] == "price"
